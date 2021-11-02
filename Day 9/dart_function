@@ -1,0 +1,23 @@
+void main(){
+ // userFunction();
+  String name ="pranto";
+  print("oop ${name.length.toString()}");
+  userFunction(45,"jashim");  
+}
+
+
+void userFunction(int value , String name){
+  if(value <20 && name != "jashim" ){
+    print("aaaaaaaaa");
+  }
+  else if(value <40 && name != "jashim"){
+    print("bbbbbbb");
+  }
+  else if (value < 60 && name != "jashim" ){
+    print("ccccccc");
+  }
+  else{
+    print("ddddddddd");
+  }
+}
+    

@@ -1,0 +1,44 @@
+######list tile
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        child: Column(
+          children: [
+            ListTile(
+              onTap: () {
+                print("Hi maasdsud");
+              },
+              minVerticalPadding: 30,
+              enabled: true,
+              isThreeLine: true,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              title: Text("Hello Jashim"),
+              subtitle: Text(
+                  "Tume ke r kokhono ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssvalo hoba na?"),
+              trailing: Icon(
+                Icons.menu,
+                color: Colors.red,
+              ),
+              tileColor: Colors.blueAccent,
+              leading: Icon(
+                Icons.ac_unit,
+                color: Colors.red,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
