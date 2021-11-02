@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.ac_unit_sharp),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.ac_unit_rounded),
+          ),
+        ],
+        title: Text("Appbar"),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                color: Colors.green,
+                margin: EdgeInsets.all(22),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 30),
+                      height: 50,
+                      width: 80,
+                      color: Colors.red,
+                      child: Text("TEXT"),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 30),
+                      height: 50,
+                      width: 80,
+                      color: Colors.red,
+                      child: Text("TEXT"),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 30),
+                      height: 50,
+                      width: 80,
+                      color: Colors.red,
+                      child: Text("TEXT"),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 50,
+                width: 80,
+                color: Colors.red,
+                child: Text("TEXT"),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

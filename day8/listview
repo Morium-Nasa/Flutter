@@ -1,0 +1,114 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        leading: Icon(
+          Icons.menu,
+          color: Colors.black,
+          size: 30,
+        ),
+        title: Text(
+          "Hello Tanvir",
+        ),
+        actions: [
+          Icon(
+            Icons.more_horiz,
+            color: Colors.black,
+            size: 30,
+          ),
+          Center(child: Text("asd")),
+        ],
+      ),
+      body: Container(
+          child: ListView(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 150,
+            color: Colors.red,
+            child: Text("Tanvir molla"),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 150,
+            color: Colors.red,
+            child: Text("Tanvir molla"),
+          ),
+          Container(
+            color: Colors.green,
+            padding: EdgeInsets.symmetric(vertical: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              //  crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  height: 50,
+                  width: 50,
+                  color: Colors.red,
+                  child: Text("Tanvir molla"),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  height: 50,
+                  width: 50,
+                  color: Colors.red,
+                  child: Text("Tanvir molla"),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  height: 50,
+                  width: 50,
+                  color: Colors.red,
+                  child: Text("Tanvir molla"),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 50,
+            color: Colors.red,
+            child: Text("Tanvir"),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 50,
+            color: Colors.red,
+            child: Text("Tanvir"),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 50,
+            color: Colors.red,
+            child: Text("Tanvir"),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            height: 50,
+            width: 50,
+            color: Colors.red,
+            child: Text("Tanvir"),
+          ),
+        ],
+      )),
+    );
+  }
+}

@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.access_alarm_sharp),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.ac_unit_rounded),
+          ),
+        ],
+        title: Text("Appbar"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Center(
+            child: Container(
+              margin: EdgeInsets.all(20.0),
+              color: Colors.blue,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("Text"),
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              color: Colors.blue,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("Text2"),
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Container(
+                  margin: EdgeInsets.all(20.0),
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text("Text3"),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.all(20.0),
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text("Text3"),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.all(20.0),
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text("Text3"),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Center(
+            child: Container(
+              color: Colors.blue,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("Text2"),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
