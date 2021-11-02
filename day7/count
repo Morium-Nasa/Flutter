@@ -1,0 +1,32 @@
+void main () // main function
+{
+  
+ int age = 101;
+ String name ="Tanvir";
+ int len = name.length;
+ 
+ if(age<=30){
+   
+//    print("Hi ${name} . your name has ${name.length.toString()} character and you are child");
+   print("${name}. You have ${len} character and you are child");
+   
+ }
+ else if(age <=49){
+//    print("Hi ${name} . your name has ${name.length.toString()} character and you are young");
+   print("${name}. You have ${len} character and you are young");
+ }
+ else if(age <=69){
+//    print("Hi ${name} . your name has ${name.length.toString()} character and you are old");
+   print("${name}. You have ${len} character and you are old");
+ }
+  else if(age <=100){
+//    print("Hi ${name} . your name has ${name.length.toString()} character and you are very old");
+    print("${name}. You have ${len} character and you are very old");
+ }
+  else{
+//     print("Hi ${name} . your name has ${name.length.toString()} character and RIP Nigga");
+    print("${name}. You have ${len} character and Sorry you are DEAD. RIP");
+  }
+  
+  
+} 

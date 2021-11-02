@@ -1,0 +1,11 @@
+void main () // main function
+{
+ List district= ["Dhaka", "Chittagpong","Madaripur", "Barisal","NewKhali"];
+  
+  
+  for(var name in district){
+    print(name);
+   
+  }
+   print("current district is ${district[2]}");
+}

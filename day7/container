@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home Page"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                color: Colors.lightGreen,
+                border: Border.all(
+                  color: Colors.red),
+                  ),
+            margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 25.0),
+            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 25.0),
+            child: Text(
+              "Hey Earth",
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 25.0),
+            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 25.0),
+            color: Colors.lightGreen,
+            child: Text(
+              "Hey Earth",
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
