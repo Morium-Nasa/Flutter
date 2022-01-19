@@ -1,6 +1,9 @@
+import 'package:admin_app/http/custom_http_request.dart';
 import 'package:admin_app/provider/category_provider.dart';
 import 'package:admin_app/screen/edit_category.dart';
+import 'package:admin_app/widget/widget.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:provider/provider.dart';
 
 class Categories extends StatefulWidget {
@@ -18,6 +21,7 @@ class _CategoriesState extends State<Categories> {
     super.initState();
   }
 
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     var categoryData = Provider.of<CategoryProvider>(context).categoryList;
@@ -76,9 +80,72 @@ class _CategoriesState extends State<Categories> {
                           ),
                           MaterialButton(
                             onPressed: () {
-                              setState(() {
-                                categoryData.removeAt(index);
-                              });
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return ModalProgressHUD(
+                                      inAsyncCall: isLoading == true,
+                                      progressIndicator: spinkit,
+                                      child: AlertDialog(
+                                        title: Text("Are you sure?"),
+                                        content: Text(
+                                            "You want to delete this item?"),
+                                        actions: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              MaterialButton(
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text("Cancle"),
+                                                color: Colors.blue,
+                                              ),
+                                              MaterialButton(
+                                                onPressed: () async {
+                                                  setState(() {
+                                                    isLoading = true;
+                                                  });
+                                                  bool data =
+                                                      await CustomHttpRequest()
+                                                          .deleteCategory(
+                                                              categoryData[
+                                                                      index]
+                                                                  .id!
+                                                                  .toInt());
+                                                  print(
+                                                      "cccccccccccccccccasdddddddcccc $data");
+                                                  if (data == true) {
+                                                    setState(() {
+                                                      isLoading = false;
+                                                      showInToast(
+                                                          "Deleted Successfully");
+                                                      categoryData
+                                                          .removeAt(index);
+                                                    });
+                                                  } else {
+                                                    setState(() {
+                                                      isLoading = false;
+
+                                                      showInToast(
+                                                          "Something wrong");
+
+                                                      print(
+                                                          "ddddddddddddddddddddddd");
+                                                    });
+                                                  }
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: Text("Delete"),
+                                                color: Colors.red,
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    );
+                                  });
                             },
                             child: Text("Delete"),
                           )

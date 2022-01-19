@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:admin_app/model/category_model.dart';
 import 'package:admin_app/model/order_model.dart';
+import 'package:admin_app/widget/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -82,5 +83,21 @@ class CustomHttpRequest {
       print("something wrong in category data");
     }
     return categoryList;
+  }
+
+  Future<bool> deleteCategory(int id) async {
+    String link = "$uri/api/admi/category/$id/delete";
+    var responce =
+        await http.delete(Uri.parse(link), headers: await getHeaderWithToken());
+    if (responce.statusCode == 200) {
+      var data = jsonDecode(responce.body);
+      print("Success");
+
+      return true;
+    } else {
+      print("Something wrong");
+      showInToast("Something wrong");
+      return false;
+    }
   }
 }
