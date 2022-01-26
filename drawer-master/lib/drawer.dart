@@ -41,7 +41,7 @@ class Drwr extends StatelessWidget {
                               height: 20,
                             ),
                             Text(
-                              "tanvirahammedsobuj@gmail.com",
+                              "abc@gmail.com",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
