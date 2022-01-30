@@ -30,7 +30,7 @@ class Drwr extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              "Tanvir Ahammed Sobuj",
+                              "ABCD XYZ",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
