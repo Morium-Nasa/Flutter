@@ -15,14 +15,14 @@ class MainPage extends StatelessWidget {
           children: [
             ListTile(
               onTap: () {
-                print("Hi maasdsud");
+                print("Hi mimi");
               },
               minVerticalPadding: 30,
               enabled: true,
               isThreeLine: true,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
-              title: Text("Hello Jashim"),
+              title: Text("Hello zshm"),
               subtitle: Text(
                   "Tume ke r kokhono ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssvalo hoba na?"),
               trailing: Icon(
