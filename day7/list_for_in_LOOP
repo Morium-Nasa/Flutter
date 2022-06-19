@@ -1,6 +1,6 @@
 void main () // main function
 {
- List district= ["Dhaka", "Chittagpong","Madaripur", "Barisal","NewKhali"];
+ List district= ["Dhaka", "Chittagpong","Chandpur", "Barisal","Comilla"];
   
   
   for(var name in district){
