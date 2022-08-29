@@ -2,7 +2,7 @@ void main () // main function
 {
   
  int age = 101;
- String name ="Tanvir";
+ String name ="Morium";
  int len = name.length;
  
  if(age<=30){
