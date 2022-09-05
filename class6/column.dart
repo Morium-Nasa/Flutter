@@ -13,7 +13,7 @@ class Day6 extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("HELLO Habibi!"),
+          title: Text("HELLO HABIBI!"),
         ),
         body: Container(
           child: Center(
