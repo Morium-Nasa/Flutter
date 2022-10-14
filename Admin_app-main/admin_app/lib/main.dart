@@ -45,6 +45,6 @@ class _MyAppState extends State<MyApp> {
       ),
       home: LoginPage(),
     );
-    // home: LoginPage());;
+    // home: LoginPage());
   }
 }
